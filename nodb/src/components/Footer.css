@@ -1,0 +1,12 @@
+.footerBack {
+  background-color: black;
+  height: 10vw;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+h3 {
+  color: rgb(255, 233, 25);
+}

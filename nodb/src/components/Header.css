@@ -1,0 +1,13 @@
+img {
+  height: 40vh;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+.imageBack {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
