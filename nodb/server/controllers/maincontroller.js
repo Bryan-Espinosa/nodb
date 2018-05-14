@@ -1,6 +1,7 @@
 const axios = require("axios");
 let shipCrew = [];
 let crewMember = [];
+let starShip;
 
 module.exports = {
   getPerson(req, res) {

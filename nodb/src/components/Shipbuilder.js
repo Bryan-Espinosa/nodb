@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Shipbuilder.css";
 import App from "../App";
 import axios from "axios";
+import Alert from "./Alert";
 
 class Shipbuilder extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Shipbuilder extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-
+  // http://swapi.co/api/people?name=${name}
   handleClick() {
     this.setState({
       crewMemberName: (this.select = this.state.crewMemberName.concat(
@@ -27,7 +28,8 @@ class Shipbuilder extends Component {
       })
       .then(res => {
         console.log(res);
-      });
+      })
+      .then(Alert("A Pilot has been selected Commander"));
   }
   handleCreate() {
     console.log("someyhing");
@@ -35,22 +37,18 @@ class Shipbuilder extends Component {
     this.setState({ showCurrentMember: true });
   }
   render() {
-    console.log(this.props.showCurrentMember);
-    console.log(this.props.shipName);
-    console.log(this.props.crewMemberName);
-
     let person = this.props.data.map((person, index) => {
       return <option key={index}>{person.name}</option>;
     });
 
     return (
       <div className="App">
-        <h2>Ship Name:</h2>
+        <h2> Ship name: </h2>
         <input
           value={this.props.shipName}
           onChange={e => this.setState({ shipName: e.target.value })}
         />
-
+        <h2> select Pilot </h2>
         <select ref={ref => (this.select = ref)}>{person}</select>
         <button
           onClick={() => {

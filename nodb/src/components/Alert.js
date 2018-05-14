@@ -1,5 +1,5 @@
 import React from "react";
-const Alert = () => {
-  alert("Commander: a ship crew is required!!");
+const Alert = str => {
+  alert(str);
 };
 export default Alert;

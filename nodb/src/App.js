@@ -13,7 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    Alert();
+    Alert("Commander: A ship dispatch is required");
     axios.get(`/api/getPerson`).then(data => {
       this.setState({ data: data.data.results });
     });
