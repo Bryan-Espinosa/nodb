@@ -1,6 +1,6 @@
 .footerBack {
   background-color: black;
-  height: 10vw;
+  height: 20vh;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -8,5 +8,7 @@
   bottom: 0;
 }
 h3 {
+  vertical-align: middle;
+  display: inline-block;
   color: rgb(255, 233, 25);
 }

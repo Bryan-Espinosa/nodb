@@ -23,9 +23,9 @@ class App extends Component {
     return (
       <div className="backgroundColor">
         <Header />
-        <body>
+        <div>
           <Shipbuilder data={this.state.data} />
-        </body>
+        </div>
         <Footer />
       </div>
     );
